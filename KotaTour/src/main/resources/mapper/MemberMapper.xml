@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MemberDAO">
+
+    <!-- 회원가입 -->
+    <insert id="insertMember">
+        INSERT INTO member(id, password, name, email, zipNum, address, phoneNum, memberType)
+        VALUES(#{id}, #{password}, #{name}, #{email}, #{zipNum}, #{address}, #{phoneNum}, #{memberType})
+    </insert>
+
+    <!-- 아이디 중복체크 -->
+    <select id="idCheck" resultType="int">
+        SELECT count(*) FROM member WHERE id = #{id}
+    </select>
+
+    <!-- 사용자 정보 조회 -->
+    <select id="getMemberInfo" resultType="member">
+        SELECT * FROM member
+        WHERE id=#{id, jdbcType=VARCHAR}
+    </select>
+
+    <!-- 이메일 중복체크 -->
+    <select id="emailCheck" resultType="int">
+        SELECT count(*) FROM member WHERE email = #{email}
+    </select>
+
+    <!-- 사용자의 name과 email과 폰번호를 조건으로 id 조회 -->
+    <select id="getMemberId" resultType="member">
+        SELECT id FROM member
+        WHERE name=#{name} AND email=#{email} AND phoneNum=#{phoneNum을}
+    </select>
+
+    <!-- 사용자의 id, name과 email, phoneNum을 조건으로 비밀번호 조회 -->
+    <select id="getMemberPassword" resultType="member">
+        SELECT password FROM member
+        WHERE name=#{name} and id=#{id} AND email=#{email} AND phoneNum=#{phoneNum을}
+    </select>
+
+
+</mapper>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+    <!-- base-package에 지정된 패키지에서 스프링 컴포넌트를 자동으로 검색하고 등록 -->
+    <context:component-scan base-package="com.yhs.project"/>
+
+    <!-- @Controller, @RequestMapping 등을 사용할 수 있도록 설정 -->
+    <mvc:annotation-driven/>
+
+    <!-- db.properties 파일에서 프로퍼티 값을 로드 -->
+    <context:property-placeholder location="classpath:config/db.properties"/>
+    <!-- Apache DBCP를 사용하여 데이터베이스 연결 풀을 구성 -->
+    <bean id="dataSource"
+          class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <!-- db.properties 파일에서 로드된 DB값 -->
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <!-- MyBatis SqlSessionFactory 설정 -->
+    <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 앞에서 정의한 dataSource 빈을 참조하여 MyBatis와 연결 -->
+        <property name="dataSource" ref="dataSource"/>
+        <!-- MyBatis 설정 파일(sql-map-config.xml)의 경로 -->
+        <property name="configLocation" value="classpath:sql-map-config.xml"/>
+    </bean>
+
+    <!-- SqlSessionFactory를 사용하여 SQL 실행을 쉽게 해주는 템플릿 클래스 -->
+    <bean id="sessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <!-- sessionFactory 빈을 생성자의 인수로 전달 -->
+        <constructor-arg ref="sessionFactory"/>
+    </bean>
+
+</beans>
+
+
+
+
+
+
+
+
+
+

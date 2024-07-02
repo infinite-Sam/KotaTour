@@ -1,0 +1,77 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ page isELIgnored="false"%>
+<%@ include file="css.jsp"%>
+
+<html>
+<head>
+<title>KotaTour</title>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<a href="/index"> <img src="images/logo.png">
+			</a>
+		</div>
+		<div id="go-login">
+			<a href="loginForm">로그인</a> | <a href="contractForm">회원가입</a>
+		</div>
+		
+		
+		<%-- <div class="search3">
+			<form id="searchForm" method="get">
+				<select id="searchOption" class="form-control" name="searchOption">
+					<!-- 검색조건을 검색처리후 결과화면에 보여주기위해  c:out 출력태그 사용, 삼항연산자 -->
+					<option value="all"
+						<c:out value="${searchOption == 'all'?'selected':''}"/>>전체</option>
+					<option value="pub"
+						<c:out value="${searchOption == 'id'?'selected':''}"/>>작성자</option>
+					<option value="title"
+						<c:out value="${searchOption == 'title'?'selected':''}"/>>제목</option>
+					<option value="author"
+						<c:out value="${searchOption == 'content'?'selected':''}"/>>내용</option>
+				</select> <input type="text" id="keyword" name="keyword" class="form-control"
+					placeholder="검색어를 입력하세요" autocomplete="off"
+					value="${criteria.keyword}" />
+				<button type="button" id="btnSearch" onclick="search()">검색</button>
+			</form>
+		</div> --%>
+		
+		   <nav>
+        <ul>
+            <li class="dd">
+                <div class="dd-menu" style="border-top: 2px solid red; padding:5px;">
+                <a href="book_list_cate1?cate1=d">국내도서</a></div>
+                <div class="dd-content">
+                  <a href="book_list_cate2?cate1=d&cate2=1">여행</a>
+                  <a href="book_list_cate2?cate1=d&cate2=2">IT 모바일</a>
+                  <a href="book_list_cate2?cate1=d&cate2=3">자격증</a>
+                </div>
+            </li>
+            <li class="dd">
+                <div class="dd-menu" style="border-top: 2px solid orange; padding: 5px;">
+                <a href="book_list_cate1?cate1=f">외국도서</a></div>
+                <div class="dd-content">
+                  <a href="book_list_cate2?cate1=f&cate2=1">어린이 유아</a>
+                  <a href="book_list_cate2?cate1=f&cate2=2">인문 사회</a>
+                  <a href="book_list_cate2?cate1=f&cate2=3">자연 과학</a>
+                </div>
+            </li>
+            <li class="dd">
+              	<div class="dd-menu" style="border-top: 2px solid blue; padding: 5px;">
+              	<a href="bestSeller">Bestseller</a></div>
+            </li>
+            <li class="dd">
+              	<div class="dd-menu" style="border-top: 2px solid purple; padding: 5px;">
+              		<a href="#" style="cursor: default;">service</a></div>
+                <div class="dd-content">
+				  <a href="notice_list">공지사항</a>
+                  <a href="qna_list">QnA</a>
+                </div>
+            </li>
+        </ul>
+      </nav>
+	</header>
