@@ -9,6 +9,10 @@
 <head>
 <title>KotaTour</title>
 <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
 </head>
 <body>
 	<header>
@@ -16,11 +20,24 @@
 			<a href="/index"> <img src="images/logo.png">
 			</a>
 		</div>
-		<div id="go-login">
-			<a href="loginForm">로그인</a> | <a href="contractForm">회원가입</a>
-		</div>
-		
-		
+		<c:choose>
+			<c:when test="${empty sessionScope.loginMember}">
+				<div id="go-login">
+					<a href="loginForm">로그인</a> | <a href="contractForm">회원가입</a>
+				</div>
+			</c:when>
+			<c:when test="${loginMember.memberType=='1'}">
+				<div id="go-login">${sessionScope.loginMember.id}님	환영합니다. &nbsp;&nbsp;&nbsp; 
+				<a href="logoutAction">로그아웃</a> | <a href="member_view">마이페이지</a>
+				</div>
+			</c:when>
+			<c:otherwise>
+				<div id="go-login">
+					${sessionScope.loginMember.name}님 환영합니다. &nbsp;&nbsp;&nbsp; <a
+						href="logoutAction">로그아웃</a> | <a href="admin_member_list">회원관리</a>
+				</div>
+			</c:otherwise>
+		</c:choose>
 		<%-- <div class="search3">
 			<form id="searchForm" method="get">
 				<select id="searchOption" class="form-control" name="searchOption">
@@ -38,40 +55,47 @@
 					value="${criteria.keyword}" />
 				<button type="button" id="btnSearch" onclick="search()">검색</button>
 			</form>
-		</div> --%>
-		
-		   <nav>
-        <ul>
-            <li class="dd">
-                <div class="dd-menu" style="border-top: 2px solid red; padding:5px;">
-                <a href="book_list_cate1?cate1=d">국내도서</a></div>
-                <div class="dd-content">
-                  <a href="book_list_cate2?cate1=d&cate2=1">여행</a>
-                  <a href="book_list_cate2?cate1=d&cate2=2">IT 모바일</a>
-                  <a href="book_list_cate2?cate1=d&cate2=3">자격증</a>
-                </div>
-            </li>
-            <li class="dd">
-                <div class="dd-menu" style="border-top: 2px solid orange; padding: 5px;">
-                <a href="book_list_cate1?cate1=f">외국도서</a></div>
-                <div class="dd-content">
-                  <a href="book_list_cate2?cate1=f&cate2=1">어린이 유아</a>
-                  <a href="book_list_cate2?cate1=f&cate2=2">인문 사회</a>
-                  <a href="book_list_cate2?cate1=f&cate2=3">자연 과학</a>
-                </div>
-            </li>
-            <li class="dd">
-              	<div class="dd-menu" style="border-top: 2px solid blue; padding: 5px;">
-              	<a href="bestSeller">Bestseller</a></div>
-            </li>
-            <li class="dd">
-              	<div class="dd-menu" style="border-top: 2px solid purple; padding: 5px;">
-              		<a href="#" style="cursor: default;">service</a></div>
-                <div class="dd-content">
-				  <a href="notice_list">공지사항</a>
-                  <a href="qna_list">QnA</a>
-                </div>
-            </li>
-        </ul>
-      </nav>
+		</div>
+
+		<nav>
+			<ul>
+				<li class="dd">
+					<div class="dd-menu"
+						style="border-top: 2px solid red; padding: 5px;">
+						<a href="book_list_cate1?cate1=d">국내도서</a>
+					</div>
+					<div class="dd-content">
+						<a href="book_list_cate2?cate1=d&cate2=1">여행</a> <a
+							href="book_list_cate2?cate1=d&cate2=2">IT 모바일</a> <a
+							href="book_list_cate2?cate1=d&cate2=3">자격증</a>
+					</div>
+				</li>
+				<li class="dd">
+					<div class="dd-menu"
+						style="border-top: 2px solid orange; padding: 5px;">
+						<a href="book_list_cate1?cate1=f">외국도서</a>
+					</div>
+					<div class="dd-content">
+						<a href="book_list_cate2?cate1=f&cate2=1">어린이 유아</a> <a
+							href="book_list_cate2?cate1=f&cate2=2">인문 사회</a> <a
+							href="book_list_cate2?cate1=f&cate2=3">자연 과학</a>
+					</div>
+				</li>
+				<li class="dd">
+					<div class="dd-menu"
+						style="border-top: 2px solid blue; padding: 5px;">
+						<a href="bestSeller">Bestseller</a>
+					</div>
+				</li>
+				<li class="dd">
+					<div class="dd-menu"
+						style="border-top: 2px solid purple; padding: 5px;">
+						<a href="#" style="cursor: default;">service</a>
+					</div>
+					<div class="dd-content">
+						<a href="notice_list">공지사항</a> <a href="qna_list">QnA</a>
+					</div>
+				</li>
+			</ul>
+		</nav> --%>
 	</header>

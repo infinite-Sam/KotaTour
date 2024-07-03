@@ -2,39 +2,76 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="MemberDAO">
 
-    <!-- 회원가입 -->
-    <insert id="insertMember">
-        INSERT INTO member(id, password, name, email, zipNum, address, phoneNum, memberType)
-        VALUES(#{id}, #{password}, #{name}, #{email}, #{zipNum}, #{address}, #{phoneNum}, #{memberType})
-    </insert>
+	<!-- 사용자 정보 조회 -->
+	<select id="getMemberInfo" resultType="member">
+		SELECT * FROM member
+		WHERE
+		id=#{id, jdbcType=VARCHAR}
+	</select>
 
-    <!-- 아이디 중복체크 -->
-    <select id="idCheck" resultType="int">
-        SELECT count(*) FROM member WHERE id = #{id}
-    </select>
+	<!-- 회원가입 -->
+	<insert id="insertMember">
+		INSERT INTO member(id, password, name, email, zipNum,
+		address, phoneNum)
+		VALUES(#{id}, #{password}, #{name},
+		#{email}, #{zipNum}, #{address}, #{phoneNum})
+	</insert>
 
-    <!-- 사용자 정보 조회 -->
-    <select id="getMemberInfo" resultType="member">
-        SELECT * FROM member
-        WHERE id=#{id, jdbcType=VARCHAR}
-    </select>
+	<!-- 아이디 중복체크 -->
+	<select id="idCheck" resultType="int">
+		SELECT count(*) FROM member
+		WHERE id = #{id}
+	</select>
 
-    <!-- 이메일 중복체크 -->
-    <select id="emailCheck" resultType="int">
-        SELECT count(*) FROM member WHERE email = #{email}
-    </select>
+	<!-- 이메일 중복체크 -->
+	<select id="emailCheck" resultType="int">
+		SELECT count(*) FROM member
+		WHERE email = #{email}
+	</select>
 
-    <!-- 사용자의 name과 email과 폰번호를 조건으로 id 조회 -->
-    <select id="getMemberId" resultType="member">
-        SELECT id FROM member
-        WHERE name=#{name} AND email=#{email} AND phoneNum=#{phoneNum을}
-    </select>
+	<!-- 사용자의 name과 email과 폰번호를 조건으로 id 조회 -->
+	<select id="getMemberId" resultType="member">
+		SELECT id FROM member
+		WHERE
+		name=#{name} AND email=#{email} AND phoneNum=#{phoneNum}
+	</select>
 
-    <!-- 사용자의 id, name과 email, phoneNum을 조건으로 비밀번호 조회 -->
-    <select id="getMemberPassword" resultType="member">
-        SELECT password FROM member
-        WHERE name=#{name} and id=#{id} AND email=#{email} AND phoneNum=#{phoneNum을}
-    </select>
+	<!-- 사용자의 id, name과 email, phoneNum을 조건으로 비밀번호 조회 -->
+	<select id="getMemberPassword" resultType="member">
+		SELECT password FROM
+		member
+		WHERE name=#{name} and id=#{id} AND email=#{email} AND
+		phoneNum=#{phoneNum}
+	</select>
 
+	<!-- 정보 수정 -->
+	<update id="updateMemberInfo">
+		UPDATE member SET
+		password=#{password,
+		jdbcType=VARCHAR},
+		zipNum=#{zipNum},
+		address=#{address,
+		jdbcType=VARCHAR},
+		phoneNum=#{phoneNum, jdbcType=VARCHAR}
+		where id=#{id,
+		jdbcType=VARCHAR}
+	</update>
 
+	<!-- 회원목록 조회 -->
+	<select id="getMemberList" parameterType="String"
+		resultType="member">
+		select * from member
+	</select>
+
+	<!-- 회원삭제 -->
+	<delete id="deleteMember">
+		delete from member
+		where id=#{id}
+	</delete>
+
+	<!-- 로그인 -->
+	<select id="confirmID" resultType="String">
+		select password from member
+		where id=#{id}
+	</select>
 </mapper>
