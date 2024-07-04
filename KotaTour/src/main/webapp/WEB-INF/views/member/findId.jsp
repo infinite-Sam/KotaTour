@@ -9,7 +9,7 @@
 		<ul class="navInfo nav-info">
 			<li class="navInfo-item"><a class="navInfo-link active"
 				aria-current="page" href="findId">ID찾기</a></li>
-			<li class="navInfo-item"><a class="navInfo-link" href="findPwd">PW찾기</a></li>
+			<li class="navInfo-item"><a class="navInfo-link" href="findPasswordForm">PW찾기</a></li>
 		</ul>
 	
 		<form id="findId" method="get" autocomplete="off">
@@ -26,7 +26,7 @@
 		</div>
 		<div class="inputInfo">
 			<label> Phone</label><br>
-			<input type="text" name="phone" id="phone" class="form-control" value="" size="40"
+			<input type="text" name="phoneNum" id="phoneNum" class="form-control" value="" size="40"
 				maxlength="13" onKeyup="inputPhoneNumber(this)">
 		</div>
 		<div>

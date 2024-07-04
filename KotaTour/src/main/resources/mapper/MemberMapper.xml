@@ -40,8 +40,7 @@
 	<select id="getMemberPassword" resultType="member">
 		SELECT password FROM
 		member
-		WHERE name=#{name} and id=#{id} AND email=#{email} AND
-		phoneNum=#{phoneNum}
+		WHERE name=#{name} AND id=#{id} AND email=#{email} AND phoneNum=#{phoneNum}
 	</select>
 
 	<!-- 정보 수정 -->

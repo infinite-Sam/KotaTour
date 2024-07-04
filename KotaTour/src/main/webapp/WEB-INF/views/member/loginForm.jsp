@@ -22,7 +22,7 @@
 	
 	    <div id="findText">
 	      <input type="button" style="padding: 0; background: none; border: none; cursor: pointer;" 
-	      		value="아이디/비밀번호 찾기" class="submit" onclick="findInfoForm()">&nbsp; |
+	      	value="아이디/비밀번호 찾기" class="submit" onclick="findInfoForm()">&nbsp; |
 	      <a href="contractForm">사용자 등록</a>
 	    </div>
 	  </form>

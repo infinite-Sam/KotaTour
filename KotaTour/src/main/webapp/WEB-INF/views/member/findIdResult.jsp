@@ -17,15 +17,15 @@
       </c:if>
     </div>
     <c:if test="${message == -1}">
-    	<input type="button" value="아이디 다시 찾기" onclick="location.href='findId'" 
+    	<input type="button" value="아이디 다시 찾기" onclick="location.href='findIdForm'" 
 				style="padding:5px; margin-top: 13px; color:white; background-color: black; cursor: pointer;">
-		<input type="button" value="비밀번호 찾기" onclick="location.href='findPwd'" 
+		<input type="button" value="비밀번호 찾기" onclick="location.href='findPasswordForm'" 
 				style="padding:5px; margin-top: 13px; color:white; background-color: black; cursor: pointer;">
     	<input type="button" value="로그인화면으로 돌아가기" onclick="idok()"
 				style="padding:5px; margin-top: 13px; color:white; background-color: black; cursor: pointer;">
     </c:if>
     <c:if test="${message == 1}">
-    <input type="button" value="비밀번호 찾기" onclick="location.href='findPwd'" 
+    <input type="button" value="비밀번호 찾기" onclick="location.href='findPasswordForm'" 
 				style="padding:5px; margin-top: 13px; color:white; background-color: black; cursor: pointer;">
     <input type="button" value="로그인화면으로 돌아가기" onclick="idok()"
 				style="padding:5px; margin-top: 13px; color:white; background-color: black; cursor: pointer;">

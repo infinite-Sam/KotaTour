@@ -8,7 +8,7 @@
 	<div class="findInfo">
 		<ul class="navInfo nav-info">
 			<li class="navInfo-item"><a class="navInfo-link"
-				aria-current="page" href="findId">ID찾기</a></li>
+				aria-current="page" href="findIdForm">ID찾기</a></li>
 			<li class="navInfo-item"><a class="navInfo-link active" href="findPwd">PW찾기</a></li>
 		</ul>
 	
@@ -28,14 +28,14 @@
 		<div class="inputInfo">
 			<label> Email</label><br>
 			<input type="text" name="email" id="email" class="form-control" value="" size="40">
-			<span class="mailChkBut">인증코드전송</span>
+			<span class="mailChkBut">인증코드전송</span><br>
 			<input id="mailChkInput" class="form-control" disabled="disabled">
 			<span class="mailcodeChk" name="mailcodeChk">인증코드확인</span>
 			<p><span id="mailChkResult"></span></p>
 		</div>
 		<div class="inputInfo">
 			<label> Phone</label><br>
-			<input type="text" name="phone" id="phone" class="form-control" value="" size="40"
+			<input type="text" name="phoneNum" id="phoneNum" class="form-control" value="" size="40"
 				maxlength="13" onKeyup="inputPhoneNumber(this)">
 		</div>
 		<div>

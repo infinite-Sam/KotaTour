@@ -2,7 +2,6 @@
   pageEncoding="UTF-8"%>  
   <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <%@ include file="../header.jsp" %>  
-<%@ include file="sidemenu.jsp" %>
 <div style="margin-top: 50px;">
 	<form name="formm" id="updateInfo" action="member_update?id=${memberVO.id}" class="mypage" method="post" autocomplete="off">
 		<div class="container">

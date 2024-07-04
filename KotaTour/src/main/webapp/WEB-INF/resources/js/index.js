@@ -136,17 +136,18 @@ function formCheck(form) {
 		}
 		form.reset();
 	}
+}
 	
 	/**
 	 *  아이디, 비밀번호 찾기 관련 스크립트 참수
 	 */
 	function findInfoForm() {
-		var url = "findId";
+		var url = "findIdForm";
 		window.open(url, "_blank_1", 
 				"width=700, height=650, left=500, top=100");
 	}
 	function findPwdForm() {
-		var url = "findPwd";
+		var url = "findPasswordForm";
 		window.open(url, "_blank_1", 
 				"width=700, height=650, left=500, top=100");
 	}
@@ -162,11 +163,11 @@ function formCheck(form) {
 		} else if ($("#email").val() == "") {
 			alert("이메일을 입력해 주세요!");
 			$("#email").focus();
-		} else if ($("#phone").val() == "") {
+		} else if ($("#phoneNum").val() == "") {
 			alert("전화번호를 입력해 주세요!");
-			$("#phone").focus();
+			$("#phoneNum").focus();
 		} else {
-			$("#findId").attr("action", "find_id").submit();
+			$("#findId").attr("action", "findIdAction").submit();
 		}
 	}
 	/*
@@ -184,11 +185,11 @@ function formCheck(form) {
 		} else if ($("#email").val() == "") {
 			alert("이메일을 입력해 주세요!");
 			$("#email").focus();
-		} else if ($("#phone").val() == "") {
+		} else if ($("#phoneNum").val() == "") {
 			alert("전화번호를 입력해 주세요!");
-			$("#phone").focus();
+			$("#phoneNum").focus();
 		} else {
-			$("#findPwd").attr("action", "find_pwd").submit();
+			$("#findPwd").attr("action", "findPasswordAction").submit();
 		}
 	}
 
@@ -210,4 +211,3 @@ function formCheck(form) {
 			$("#findPW").attr("action", "find_password").submit();
 		}
 	}
-}

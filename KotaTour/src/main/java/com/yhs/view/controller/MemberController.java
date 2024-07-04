@@ -166,7 +166,6 @@ public class MemberController {
 	// 비밀번호 찾기
 	@GetMapping(value = "/findPasswordAction")
 	public String findPasswordAction(MemberDTO memberDTO, Model model) {
-		System.out.println("비밀번호 찾기");
 		MemberDTO member = memberService.getMemberPassword(memberDTO);
 
 		if (member != null) { // 사용자 아이디가 존재한다면
