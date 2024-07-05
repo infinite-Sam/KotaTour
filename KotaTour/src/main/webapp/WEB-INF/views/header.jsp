@@ -28,13 +28,13 @@
 			</c:when>
 			<c:when test="${loginMember.memberType=='1'}">
 				<div id="go-login">${sessionScope.loginMember.id}님	환영합니다. &nbsp;&nbsp;&nbsp; 
-				<a href="logoutAction">로그아웃</a> | <a href="member_view">마이페이지</a>
+				<a href="logoutAction">로그아웃</a> | <a href="memberDetailForm">마이페이지</a>
 				</div>
 			</c:when>
 			<c:otherwise>
 				<div id="go-login">
 					${sessionScope.loginMember.name}님 환영합니다. &nbsp;&nbsp;&nbsp; <a
-						href="logoutAction">로그아웃</a> | <a href="admin_member_list">회원관리</a>
+						href="logoutAction">로그아웃</a> | <a href="adminMemberList">회원관리</a>
 				</div>
 			</c:otherwise>
 		</c:choose>

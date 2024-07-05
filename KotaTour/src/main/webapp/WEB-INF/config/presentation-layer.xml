@@ -18,6 +18,7 @@
 	<mvc:resources location="/WEB-INF/resources/js/" mapping="/js/**" />
     <!-- /WEB-INF/views/member/경로를 /member/**로 매핑 -->
     <mvc:resources location="/WEB-INF/views/member/" mapping="/member/**"/>
+    <mvc:resources location="/WEB-INF/views/admin/" mapping="/admin/**"/>
 
     <!-- JSP 파일을 뷰로 사용하기 위한 설정 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

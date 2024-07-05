@@ -38,7 +38,7 @@
 
 	<!-- 사용자의 id, name과 email, phoneNum을 조건으로 비밀번호 조회 -->
 	<select id="getMemberPassword" resultType="member">
-		SELECT password FROM
+		SELECT * FROM
 		member
 		WHERE name=#{name} AND id=#{id} AND email=#{email} AND phoneNum=#{phoneNum}
 	</select>

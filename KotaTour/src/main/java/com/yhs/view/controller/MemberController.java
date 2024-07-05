@@ -185,7 +185,7 @@ public class MemberController {
 		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
 
 		if (loginMember == null) {
-			return "member/login";
+			return "member/loginForm";
 		}
 		MemberDTO member = memberService.getMemberInfo(loginMember.getId());
 		model.addAttribute("member", member);

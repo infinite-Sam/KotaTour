@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+
+/* 마이페이지 */
+#mypage {
+	position: relative;
+	min-height: 600px;
+}
+.submenu {
+	text-align: center;
+}
+.submenu ul li {
+	display: inline-block;
+	margin-right: 80px; 
+}
+.submenu ul li a {
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+}

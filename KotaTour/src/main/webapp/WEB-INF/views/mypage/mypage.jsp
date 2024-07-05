@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>  
-<%@ include file="../header.jsp" %>  
+<%@ include file="../header.jsp" %>
 <%@ include file="sidemenu.jsp" %>
 
 <div style="margin-top: 100px;">
-<form method="post" id="mypage" action="member_update_form?id=${member.id}" name="formm" autocomplete="off">
+<form method="post" id="mypage" action="updateMemberForm?id=${member.id}" name="formm" autocomplete="off">
 	<div class="container">
 		<div class="insert">
 			<table class="join">
@@ -27,19 +27,19 @@
 				<tr>
 					<td class="col1" style="width: 100px; font-size: 15px; font-weight: bold; text-align: center;">Phone</td>
 					<td class="col2" style="width: 500px; padding-left: 20px; font-size: 15px;">
-						${member.phone}</td>
+						${member.phoneNum}</td>
 				</tr>
 				<tr>
 					<td class="col1" style="width: 100px; font-size: 15px; font-weight: bold; text-align: center;">Address</td>
 					<td class="col2" style="width: 500px; padding-left: 20px; font-size: 15px;">
-						[${member.zipnum}]&nbsp;${member.addr}</td>
+						[${member.zipNum}]&nbsp;${member.address}</td>
 				</tr>
 			</table>
 		</div>
 		<div class="create">
 			<input class="but4" type="submit" value="정보수정"> 
 			<input class="but3" type="button" id="deleteMember" value="회원탈퇴" 
-				onclick="location.href='member_delete?id=${member.id}'">
+				onclick="location.href='deleteMember?id=${member.id}'">
 		</div>
 	</div>
 </form>

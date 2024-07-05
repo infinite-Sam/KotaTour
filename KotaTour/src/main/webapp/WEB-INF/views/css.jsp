@@ -7,3 +7,5 @@
 <link rel="stylesheet" href="css/search.css">
 <link rel="stylesheet" href="css/login.css">
 <link rel="stylesheet" href="css/find.css">
+<link rel="stylesheet" href="css/mypage.css">
+<link rel="stylesheet" href="css/qna.css">
