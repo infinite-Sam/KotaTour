@@ -38,7 +38,7 @@
 				</div>
 			</c:otherwise>
 		</c:choose>
-		<%-- <div class="search3">
+		<div class="search3">
 			<form id="searchForm" method="get">
 				<select id="searchOption" class="form-control" name="searchOption">
 					<!-- 검색조건을 검색처리후 결과화면에 보여주기위해  c:out 출력태그 사용, 삼항연산자 -->
@@ -62,29 +62,29 @@
 				<li class="dd">
 					<div class="dd-menu"
 						style="border-top: 2px solid red; padding: 5px;">
-						<a href="book_list_cate1?cate1=d">국내도서</a>
+						<a href="book_list_cate1?cate1=d">여행정보</a>
 					</div>
 					<div class="dd-content">
-						<a href="book_list_cate2?cate1=d&cate2=1">여행</a> <a
-							href="book_list_cate2?cate1=d&cate2=2">IT 모바일</a> <a
-							href="book_list_cate2?cate1=d&cate2=3">자격증</a>
+						<a href="book_list_cate2?cate1=d&cate2=1">관광지도</a> 
+						<a href="book_list_cate2?cate1=d&cate2=2">월별 날씨</a> 
+						<a href="book_list_cate2?cate1=d&cate2=3">월별 축제</a>
 					</div>
 				</li>
 				<li class="dd">
 					<div class="dd-menu"
 						style="border-top: 2px solid orange; padding: 5px;">
-						<a href="book_list_cate1?cate1=f">외국도서</a>
+						<a href="book_list_cate1?cate1=f">패키지</a>
 					</div>
 					<div class="dd-content">
-						<a href="book_list_cate2?cate1=f&cate2=1">어린이 유아</a> <a
-							href="book_list_cate2?cate1=f&cate2=2">인문 사회</a> <a
-							href="book_list_cate2?cate1=f&cate2=3">자연 과학</a>
+						<a href="book_list_cate2?cate1=f&cate2=1">반딧불이 투어</a> <a
+							href="book_list_cate2?cate1=f&cate2=2">시티 투어</a> <a
+							href="book_list_cate2?cate1=f&cate2=3">섬 투어</a>
 					</div>
 				</li>
 				<li class="dd">
 					<div class="dd-menu"
 						style="border-top: 2px solid blue; padding: 5px;">
-						<a href="bestSeller">Bestseller</a>
+						<a href="bestSeller">자유게시판</a>
 					</div>
 				</li>
 				<li class="dd">
@@ -97,5 +97,5 @@
 					</div>
 				</li>
 			</ul>
-		</nav> --%>
+		</nav>
 	</header>
