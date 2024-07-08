@@ -9,7 +9,7 @@
 			<li><a href="adminMemberList">회원관리</a></li>
 			<li><a href="admin_order_list">주문/배송내역</a></li>
 			<li><a href="admin_member_qna">QnA</a></li>
-			<li><a href="admin_notice_list">공지사항</a></li>
+			<li><a href="getNoticeList">공지사항</a></li>
 		</ul>
 		</br>
 		<hr style="border: 1.5px solid black; width: 85%; text-align: center;">

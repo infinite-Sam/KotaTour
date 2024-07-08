@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* 전체 */
-* { 
+* {
 	margin: 0 auto;
 	padding: 0;
 	box-sizing: border-box; /* 테두리를 포함한 크기 */
@@ -9,6 +9,7 @@
 	font-family: sans-serif;
 	list-style: none;
 }
+
 body {
 	background-color: #e6ffff;
 	min-width: 1400px;
@@ -18,58 +19,67 @@ body {
 /* header */
 header {
 	min-width: 1400px;
-    height: 100px;
-    top: 0%;
-    left: 0;
-    right: 0;
-    z-index: 5;
-    background-color: white;
-    position: fixed;
-    text-align: center;
-    align-items: center;
+	height: 100px;
+	top: 0%;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	background-color: white;
+	position: fixed;
+	text-align: center;
+	align-items: center;
 }
 
 header>#logo { /* 로고 */
-    float: left; /* 로고 왼쪽 정렬 */
-    height: 100px;
-    position: relative;
-    top: 0%;
-    left: 15%;
+	float: left; /* 로고 왼쪽 정렬 */
+	height: 100px;
+	position: absolute;
+	top: 0%;
+	left: 15%;
 }
 
 header>#logo>a>img {
-    padding: 0px 4px 0px 0px;
-    height: 100px;
-    width: 100px;
+	padding: 0px 4px 0px 0px;
+	height: 100px;
+	width: 100px;
 }
+
 header>#go-login {
-	position: relative;
+	position: absolute;
 	right: 9%;
 	top: 5%;
 	float: right;
 }
+
 header>#go-login a {
 	color: rgba(44, 65, 108);
 	font-size: 13px;
 	font-weight: bold;
 }
 
-header>nav {
-	float: right;
-	width: 75%;
-	line-height: 100px;
-	display: inline;
-	z-index: 999;
+header>.header-menu {
+	position: relative;
+	float: left;
+	left: 20%;
+	right: 30%;
+	top: 10%;
+	text-align: center;
+	align-items: center;
+	align-content: center;
+}
+
+header>.header-menu>nav {
+	padding-left: 80px;
 }
 
 header>nav>ul {
 	list-style-type: none;
-	margin-left: 100px;
 }
 
 nav ul li { /* 헤더 메뉴 */
 	display: inline-block; /* 가로로 나타내기 */
 	margin-right: 100px;
+	margin-left: 100px;
 }
 
 .dd {
@@ -100,9 +110,11 @@ nav ul li { /* 헤더 메뉴 */
 	text-decoration: none;
 	display: block;
 }
-.dd-content a span{
+
+.dd-content a span {
 	font-size: 15px;
 }
+
 .dd-content {
 	display: none;
 }
@@ -122,5 +134,5 @@ nav ul li { /* 헤더 메뉴 */
 
 /* 하위목록에 마우스를 가져다 대었을때 박스 색깔 */
 .dd-content a:hover {
-	background-color: rgba(47, 138, 241, 0.5);
+	background-color: #cff5fa;
 }

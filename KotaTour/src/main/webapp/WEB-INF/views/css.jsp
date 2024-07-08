@@ -9,3 +9,4 @@
 <link rel="stylesheet" href="css/find.css">
 <link rel="stylesheet" href="css/mypage.css">
 <link rel="stylesheet" href="css/qna.css">
+<link rel="stylesheet" href="css/notice.css">

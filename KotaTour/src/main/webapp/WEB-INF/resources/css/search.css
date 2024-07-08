@@ -4,18 +4,21 @@
 	width: 400px;
 	clear: both;
 	margin-right: 400px;
-	z-index: 1;	
+	z-index: 1;
 }
+
 .search #searchForm2 select {
 	padding: 3px;
 	position: relative;
 	left: 30px;
 	height: 30px;
 }
+
 .search #searchForm2 input {
 	padding-left: 30px;
 	height: 30px;
 }
+
 .search #searchForm2 button {
 	padding: 5px;
 	position: relative;
@@ -33,18 +36,21 @@
 	width: 400px;
 	clear: both;
 	margin-right: 400px;
-	z-index: 1;	
+	z-index: 1;
 }
+
 .search2 #searchForm3 select {
 	padding: 3px;
 	position: relative;
 	left: 30px;
 	height: 30px;
 }
+
 .search2 #searchForm3 input {
 	padding-left: 30px;
 	height: 30px;
 }
+
 .search2 #searchForm3 button {
 	padding: 5px;
 	position: relative;
@@ -61,8 +67,8 @@
 .search3 {
 	width: 400px;
 	position: relative;
+	left: 750px;
 	top: 50px;
-	left: 600px;
 }
 .search3 #searchForm select {
 	padding: 3px;
@@ -73,15 +79,15 @@
 .search3 #searchForm input {
 	padding-left: 30px;
 	height: 30px;
+	border-color: black;
 }
 .search3 #searchForm button {
 	padding: 5px;
 	position: relative;
-	left: -35px;
-	bottom: 1px;
-	height: 28px;
+	top: 1px;
+	left: -15px;
+	height: 30px;
 	border-radius: 4px;
 	background-color: #e8ffff;
-	border: none;
 	font-weight: bold;
 }

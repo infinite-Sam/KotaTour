@@ -211,3 +211,24 @@ function formCheck(form) {
 			$("#findPW").attr("action", "find_password").submit();
 		}
 	}
+	
+	/* 공지사항 */
+	function noticeWrite(){
+		var chk = confirm("공지사항을 등록하시겠습니까?");
+		if(chk){
+			alert("등록이 완료되었습니다.");
+		}
+	}
+	function noticeDelete(noticeNum){ // 공지사항삭제
+		var chk = confirm("공지사항을 삭제하시겠습니까?");
+		if(chk){
+			location.href="deleteNotice?noticeNum="+noticeNum;
+			alert("삭제가 완료되었습니다.");
+		}
+	}
+	function noticeUpdate(){ // 공지사항수정
+		var chk = confirm("공지사항을 수정하시겠습니까?");
+		if(chk){
+			alert("수정이 완료되었습니다.");
+		}
+	}
