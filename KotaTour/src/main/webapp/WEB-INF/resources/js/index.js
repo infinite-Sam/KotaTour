@@ -232,3 +232,50 @@ function formCheck(form) {
 			alert("수정이 완료되었습니다.");
 		}
 	}
+	
+	function qnaWrite(){
+		var chk = confirm("1대1 문의를 등록하시겠습니까?");
+		if(chk){
+			alert("문의가 등록이 완료되었습니다.");
+		}
+	}
+	function qnaUpdate(){
+		var chk = confirm("문의를 수정하시겠습니까?");
+		if(chk){
+			alert("수정이 완료되었습니다.");
+		}
+	}
+	/* 자주묻는질문 */
+	function aqnaWrite(){ // 자묻질 등록
+		var chk = confirm("자주묻는질문을 등록하시겠습니까?");
+		if(chk){
+			alert("등록이 완료되었습니다.");
+		}
+	}
+	function aqnaDelete(aqseq){ // 자묻질 삭제
+		var chk = confirm("자주묻는질문을 삭제하시겠습니까?");
+		if(chk){
+			location.href="admin_aqna_delete?aqseq="+aqseq;
+			alert("삭제가 완료되었습니다.");
+		}
+	}
+	function aqnaUpdate(){ // 자묻질 수정
+		var chk = confirm("자주묻는질문을 수정하시겠습니까?");
+		if(chk){
+			alert("수정이 완료되었습니다.");
+		}
+	}
+	function qnaAnswer(){ // 답변등록
+		var chk = confirm("답변을 등록 하시겠습니까?");
+		if(chk){
+			alert("등록이 완료되었습니다.");
+		}
+	}
+
+	function qnaDelete(qseq){ // 질문삭제
+		var chk = confirm("질문을 삭제하시겠습니까?");
+		if(chk){
+			location.href="qna_delete?qseq="+qseq;
+			alert("삭제가 완료되었습니다.");
+		}
+	}

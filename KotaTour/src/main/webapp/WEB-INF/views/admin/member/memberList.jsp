@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../../header.jsp" %>  
 <%@ include file="sidemenu.jsp" %>
-	<form name="formm" class="qnaList" method="post" style="margin-top: -10px;min-height: 600px">
+	<form name="formm" class="qnaList" method="post" >
 	<h2 style="position: relative; margin-top: 30px;">회원관리</h2>
 	<table id="andList">
 		<tr class="titleline">

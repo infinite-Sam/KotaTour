@@ -2,8 +2,10 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
 
-<form name="formm" class="noticeList" method="post"
-	style="margin-top: 150px;">
+<c:if test="${loginMember.memberType eq '0'}">
+	<%@ include file="../admin/member/sidemenu.jsp" %>
+</c:if>
+<form name="formm" class="noticeList" method="post">
 	<h2>공지사항</h2>
 	<table>
 		<tr class="titleline">

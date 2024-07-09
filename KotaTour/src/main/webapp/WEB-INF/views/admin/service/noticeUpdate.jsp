@@ -2,7 +2,7 @@
   pageEncoding="UTF-8"%>
 <%@ include file="../../header.jsp"%>
 <div style="margin-bottom: 100px; min-height: 500px;">
-<form name="frm" class="noticeWrite" action="updateNoticeAction?noticeNum=${noticeDTO.noticeNum}" autocomplete="off" id="update_form" method="post">	
+<form name="frm" class="noticeWrite" action="updateNoticeAction?noticeNum=${notice.noticeNum}" autocomplete="off" id="update_form" method="post">	
 	<h1>공지사항 수정</h1><br><br>
 	<table class="inputNotice">
 		<tr>
@@ -21,3 +21,4 @@
 	</div>
 </form>
 </div>
+<%@ include file="../../footer.jsp"%>

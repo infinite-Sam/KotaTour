@@ -7,11 +7,14 @@
          <!-- com.yhs.project.dto.MemberDTO 클래스를 member라는 별칭으로 정의 -->
         <typeAlias type="com.yhs.project.dto.MemberDTO" alias="member"/>
         <typeAlias type="com.yhs.project.dto.NoticeDTO" alias="notice"/>
+        <typeAlias type="com.yhs.project.dto.QnaDTO" alias="qna"/>
+        <typeAlias type="com.yhs.project.dto.AqnaDTO" alias="aqna"/>
     </typeAliases>
 
     <mappers>
         <!-- mapper/MemberMapper.xml 파일을 매퍼로 등록 -->
         <mapper resource="mapper/MemberMapper.xml"/>
         <mapper resource="mapper/NoticeMapper.xml"/>
+        <mapper resource="mapper/QnaMapper.xml"/>
     </mappers>
 </configuration>

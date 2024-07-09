@@ -3,8 +3,7 @@
 /* 공지사항 */
 .noticeList {
 	text-align: center;
-	min-height: 800px;
-	margin-top: 50px;
+	margin-top: 150px;
 }
 
 .noticeList h2 {

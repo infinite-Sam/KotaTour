@@ -80,7 +80,7 @@
 									<a href="#" style="cursor: default;">service</a>
 								</div>
 								<div class="dd-content">
-									<a href="getNoticeList">공지사항</a> <a href="qna_list">QnA</a>
+									<a href="getNoticeList">공지사항</a> <a href="getQnaList">QnA</a>
 								</div>
 							</li>
 						</ul>
@@ -147,7 +147,7 @@
 									<a href="#" style="cursor: default;">service</a>
 								</div>
 								<div class="dd-content">
-									<a href="getNoticeList">공지사항</a> <a href="qna_list">QnA</a>
+									<a href="getNoticeList">공지사항</a> <a href="getQnaList">QnA</a>
 								</div>
 							</li>
 						</ul>
@@ -214,7 +214,7 @@
 									<a href="#" style="cursor: default;">service</a>
 								</div>
 								<div class="dd-content">
-									<a href="getNoticeList">공지사항</a> <a href="qna_list">QnA</a>
+									<a href="getNoticeList">공지사항</a> <a href="getQnaList">QnA</a>
 								</div>
 							</li>
 						</ul>

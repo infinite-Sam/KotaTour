@@ -87,7 +87,7 @@ public class AdminController {
 		public String updateNoticeAction(NoticeDTO noticeDTO, HttpSession session) {
 				noticeDTO.setName("관리자");
 				noticeService.updateNotice(noticeDTO);
-				return "redirect:getNoticeDetail?noticeNum="+noticeDTO.getNoticeNum(); // 작성완료후  공지사항 목록으로 이동
+				return "redirect:getNoticeDetail?noticeNum="+noticeDTO.getNoticeNum();
 		}
 		
 		// 공지사항 삭제 기능

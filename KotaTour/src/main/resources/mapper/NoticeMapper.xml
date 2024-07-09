@@ -29,7 +29,7 @@
 	<!-- 공지사항 수정 -->
 	<update id="updateNotice">
 		update notice set 
-			title=#{title}, content=#{content}, SYSDATE)
+			title=#{title}, content=#{content}, indate=SYSDATE
 			where noticeNum=#{noticeNum}
 	</update>
 </mapper>
