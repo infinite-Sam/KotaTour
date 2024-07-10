@@ -16,12 +16,12 @@
 	</div>
 	<div id="buttons">
 		<input type="button" value="목록보기" class="submit"
-			onclick="location.href='qna_list'">
-		<c:if test="${loginUser.type=='2'}">
+			onclick="location.href='getQnaList'">
+		<c:if test="${loginMember.memberType eq '0'}">
 			<input type="button" value="수정하기" class="submit"
-				onclick="location.href='admin_aqna_update_form?aqseq=${aqnaVO.aqseq}'">
+				onclick="location.href='aqnaUpdateForm?aqnaNum=${aqnaVO.aqnaNum}'">
 			<input type="button" value="삭제하기" class="submit"
-				onclick="aqnaDelete(${aqnaVO.aqseq})">
+				onclick="aqnaDelete(${aqnaVO.aqnaNum})">
 		</c:if>
 	</div>
 </form>

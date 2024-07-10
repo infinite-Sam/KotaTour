@@ -8,7 +8,7 @@
 		<ul>
 			<li><a href="adminMemberList">회원관리</a></li>
 			<li><a href="admin_order_list">주문/배송내역</a></li>
-			<li><a href="admin_member_qna">QnA</a></li>
+			<li><a href="getQnaList">QnA</a></li>
 			<li><a href="getNoticeList">공지사항</a></li>
 		</ul>
 		</br>

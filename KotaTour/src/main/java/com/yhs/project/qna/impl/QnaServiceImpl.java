@@ -2,8 +2,10 @@ package com.yhs.project.qna.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.yhs.project.dao.QnaDAO;
 import com.yhs.project.dto.AqnaDTO;
 import com.yhs.project.dto.QnaDTO;
 import com.yhs.project.qna.QnaService;
@@ -11,64 +13,67 @@ import com.yhs.project.qna.QnaService;
 @Service("qnaService")
 public class QnaServiceImpl implements QnaService {
 
+	@Autowired
+	private QnaDAO qnaDAO;
+
 	@Override
 	public List<QnaDTO> getQnaList(String id) {
-		return null;
+		return qnaDAO.getQnaList(id);
 	}
 
 	@Override
 	public QnaDTO getQnaDetail(int qnaNum) {
-		return null;
+		return qnaDAO.getQnaDetail(qnaNum);
 	}
 
 	@Override
-	public QnaDTO insertQna(QnaDTO qnaDTO) {
-		return null;
+	public void insertQna(QnaDTO qnaDTO) {
+		qnaDAO.insertQna(qnaDTO);
 	}
 
 	@Override
-	public QnaDTO updateQna(QnaDTO qnaDTO) {
-		return null;
+	public void updateQna(QnaDTO qnaDTO) {
+		qnaDAO.updateQna(qnaDTO);
 	}
 
 	@Override
-	public QnaDTO deleteQna(int qnaNum) {
-		return null;
+	public void deleteQna(int qnaNum) {
+		qnaDAO.deleteQna(qnaNum);
 	}
 
 	@Override
-	public QnaDTO qnaAnswer(QnaDTO qnaDTO) {
-		return null;
+	public void qnaAnswer(QnaDTO qnaDTO) {
+		qnaDAO.qnaAnswer(qnaDTO);
 	}
 
 	@Override
 	public List<AqnaDTO> getAqnaList(String name) {
-		return null;
+		return qnaDAO.getAqnaList(name);
 	}
 
 	@Override
 	public AqnaDTO getAQnaDetail(int aqnaNum) {
-		return null;
+		return qnaDAO.getAqnaDetail(aqnaNum);
 	}
 
 	@Override
-	public AqnaDTO insertAqna(AqnaDTO aqnaDTO) {
-		return null;
+	public void insertAqna(AqnaDTO aqnaDTO) {
+		qnaDAO.insertAqna(aqnaDTO);
 	}
 
 	@Override
-	public AqnaDTO updateAqna(AqnaDTO aqnaDTO) {
-		return null;
+	public void updateAqna(AqnaDTO aqnaDTO) {
+		qnaDAO.updateAqna(aqnaDTO);
 	}
 
 	@Override
-	public AqnaDTO deleteAqna(int aqnaNum) {
-		return null;
+	public void deleteAqna(int aqnaNum) {
+		qnaDAO.deleteAqna(aqnaNum);
 	}
 
 	@Override
 	public List<QnaDTO> getMemberQnaList() {
-		return null;
+		return qnaDAO.getMemberQnaList();
 	}
 
 }

@@ -3,7 +3,7 @@
 <%@ include file="../../header.jsp"%>
 
 <div style="margin-bottom: 100px; min-height: 500px;">
-<form name="frm" action="admin_aqna_update?aqseq=${aqna.aqseq}" class="noticeWrite" method="post">
+<form name="frm" action="aqnaUpdateAction?aqnaNum=${aqna.aqnaNum}" class="noticeWrite" method="post">
 <h1>자주묻는질문 수정</h1><br><br>
 	<table class="inputNotice">
 		<tr>
@@ -22,8 +22,8 @@
 		</tr>	
 	</table>
 	<div id="buttons">
-		<input type="submit" value="등록" class="submit" onclick="aqnaUpdate()"> 
-		<input type="reset" value="취소" class="cancel" onclick="location.href='admin_member_qna'">
+		<input type="submit" value="수정" class="submit" onclick="aqnaUpdate()"> 
+		<input type="reset" value="취소" class="cancel" onclick="window.history.go(-1)">
 	</div>
 </form>
 </div>

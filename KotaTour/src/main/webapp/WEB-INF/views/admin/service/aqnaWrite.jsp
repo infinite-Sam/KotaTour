@@ -3,7 +3,7 @@
 <%@ include file="../../header.jsp" %>
 
 <div style="margin-bottom: 100px; min-height: 500px;">
-<form name="formm" method="post" class="noticeWrite" action="admin_aqna_write" autocomplete="off">
+<form name="formm" method="post" class="noticeWrite" action="aqnaWriteAction" autocomplete="off">
 	<h1>자주묻는질문 등록</h1><br><br>
 	<table class="inputNotice">
 		<tr>
@@ -23,7 +23,7 @@
 	</table>
 	<div id="buttons">
 		<input type="submit" value="등록" class="submit" onclick="aqnaWrite()"> 
-		<input type="reset" value="취소" class="cancel" onclick="location.href='admin_member_qna'">
+		<input type="reset" value="취소" class="cancel" onclick="location.href='getQnaList'">
 	</div>
 </form>
 </div>

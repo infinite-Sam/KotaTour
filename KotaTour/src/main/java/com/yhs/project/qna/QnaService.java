@@ -11,24 +11,24 @@ public interface QnaService {
 
 	QnaDTO getQnaDetail(int qnaNum);
 
-	QnaDTO insertQna(QnaDTO qnaDTO);
+	void insertQna(QnaDTO qnaDTO);
 	
-	QnaDTO updateQna(QnaDTO qnaDTO);
+	void updateQna(QnaDTO qnaDTO);
 	
-	QnaDTO deleteQna(int qnaNum);
+	void deleteQna(int qnaNum);
 	
-	QnaDTO qnaAnswer(QnaDTO qnaDTO);
+	void qnaAnswer(QnaDTO qnaDTO);
 	
 	
 	List<AqnaDTO> getAqnaList(String name);
 
 	AqnaDTO getAQnaDetail(int aqnaNum);
 	
-	AqnaDTO insertAqna(AqnaDTO aqnaDTO);
+	void insertAqna(AqnaDTO aqnaDTO);
 	
-	AqnaDTO updateAqna(AqnaDTO aqnaDTO);
+	void updateAqna(AqnaDTO aqnaDTO);
 	
-	AqnaDTO deleteAqna(int aqnaNum);
+	void deleteAqna(int aqnaNum);
 	
 	
 	List<QnaDTO> getMemberQnaList();

@@ -4,7 +4,7 @@ public class AqnaDTO {
 
 	private int aqnaNum; // 게시글번호
 	private String title; // 제목
-	private String content; // 내용
+	private String questions; // 내용
 	private String answer; // 답변
 	private String name; // 등록한사람
 
@@ -24,12 +24,12 @@ public class AqnaDTO {
 		this.title = title;
 	}
 
-	public String getContent() {
-		return content;
+	public String getQuestions() {
+		return questions;
 	}
 
-	public void setContent(String content) {
-		this.content = content;
+	public void setQuestions(String questions) {
+		this.questions = questions;
 	}
 
 	public String getAnswer() {
@@ -50,7 +50,7 @@ public class AqnaDTO {
 
 	@Override
 	public String toString() {
-		return "AqnaDTO [aqnaNum=" + aqnaNum + ", title=" + title + ", content=" + content + ", answer=" + answer
+		return "AqnaDTO [aqnaNum=" + aqnaNum + ", title=" + title + ", questions=" + questions + ", answer=" + answer
 				+ ", name=" + name + "]";
 	}
 

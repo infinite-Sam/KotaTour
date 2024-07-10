@@ -252,10 +252,10 @@ function formCheck(form) {
 			alert("등록이 완료되었습니다.");
 		}
 	}
-	function aqnaDelete(aqseq){ // 자묻질 삭제
+	function aqnaDelete(aqnaNum){ // 자묻질 삭제
 		var chk = confirm("자주묻는질문을 삭제하시겠습니까?");
 		if(chk){
-			location.href="admin_aqna_delete?aqseq="+aqseq;
+			location.href="deleteAqna?aqnaNum="+aqnaNum;
 			alert("삭제가 완료되었습니다.");
 		}
 	}

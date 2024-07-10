@@ -37,11 +37,14 @@ public class QnaController {
 
 			List<AqnaDTO> getAqnaList = qnaService.getAqnaList("관리자");
 			model.addAttribute("aqnaList", getAqnaList);
+			
+			List<QnaDTO> getMemberQnaList = qnaService.getMemberQnaList();
+			model.addAttribute("getMemberQnaList", getMemberQnaList);
 
 			return "service/qnaList";
 		}
 	}
-
+	
 	// qna 작성 화면
 	@GetMapping(value="qnaWriteForm")
 	public String qnaWriteForm(HttpSession session) {
