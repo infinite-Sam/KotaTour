@@ -245,6 +245,12 @@ function formCheck(form) {
 			alert("수정이 완료되었습니다.");
 		}
 	}
+	function qnaanswer(){
+		var chk = confirm("답변을 등록하시겠습니까?");
+		if(chk){
+			alert("답변등록이 완료되었습니다.");
+		}
+	}
 	/* 자주묻는질문 */
 	function aqnaWrite(){ // 자묻질 등록
 		var chk = confirm("자주묻는질문을 등록하시겠습니까?");
@@ -272,10 +278,10 @@ function formCheck(form) {
 		}
 	}
 
-	function qnaDelete(qseq){ // 질문삭제
+	function qnaDelete(qnaNum){ // 질문삭제
 		var chk = confirm("질문을 삭제하시겠습니까?");
 		if(chk){
-			location.href="qna_delete?qseq="+qseq;
+			location.href="deleteQna?qnaNum="+qnaNum;
 			alert("삭제가 완료되었습니다.");
 		}
 	}

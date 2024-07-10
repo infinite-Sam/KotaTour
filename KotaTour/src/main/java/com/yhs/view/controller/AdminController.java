@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.yhs.project.dto.AqnaDTO;
 import com.yhs.project.dto.MemberDTO;
 import com.yhs.project.dto.NoticeDTO;
+import com.yhs.project.dto.QnaDTO;
 import com.yhs.project.member.MemberService;
 import com.yhs.project.notice.NoticeService;
 import com.yhs.project.qna.QnaService;
@@ -135,5 +136,21 @@ public class AdminController {
 		public String deleteAqna(AqnaDTO aqnaDTO) {
 			qnaService.deleteAqna(aqnaDTO.getAqnaNum());
 			return "redirect:getQnaList";
+		}
+		
+		// 문의 답변 화면 이동
+		@GetMapping(value="qnaAnswerForm")
+		public String qnaAnswerView(QnaDTO qnaDTO, HttpSession session, Model model) {
+				QnaDTO qna = qnaService.getQnaDetail(qnaDTO.getQnaNum());
+				model.addAttribute("qna", qna);
+				return "admin/service/qnaAnswer";
+		}
+		
+		// 문의 답변 작성 기능
+		@PostMapping(value="qnaAnswerAction")
+		public String qnaAnswerAction(QnaDTO qnaDTO, Model model, HttpSession session) {
+				qnaService.qnaAnswer(qnaDTO);
+				model.addAttribute("qna", qnaDTO);
+				return "redirect:getQnaDetail?qnaNum="+qnaDTO.getQnaNum();
 		}
 }

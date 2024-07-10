@@ -17,7 +17,7 @@ public class QnaDAO {
 
 	// qna 목록조회
 	public List<QnaDTO> getQnaList(String id) {
-		return sst.selectOne("QnaDAO.getQnaList", id);
+		return sst.selectList("QnaDAO.getQnaList", id);
 	}
 
 	// qna상세보기

@@ -79,7 +79,7 @@ public class QnaController {
 		} else {
 			QnaDTO qna = qnaService.getQnaDetail(qnaDTO.getQnaNum());
 			AqnaDTO aqna = qnaService.getAQnaDetail(aqnaDTO.getAqnaNum());
-			model.addAttribute("qnaVO", qna);
+			model.addAttribute("qnaDTO", qna);
 			model.addAttribute("aqnaVO", aqna);
 			return "service/qnaDetail";
 		}

@@ -79,7 +79,9 @@
 
 /* qna 상세보기 */
 .qnaDetail {
-	margin-top: 200px;
+	margin-top: 150px;
+	min-height: 1100px;
+	height: auto;
 }
 
 .qnaDetail h2 {

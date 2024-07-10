@@ -18,16 +18,15 @@
 
 	<!-- qna 등록 -->
 	<insert id="insertQna">
-		INSERT INTO qna(qnaNum, title, content, id, image, indate)
-		VALUES (qna_seq.NEXTVAL, #{title}, #{content}, #{id}, #{image}, SYSDATE)
+		INSERT INTO qna(qnaNum, title, content, id, indate)
+		VALUES (qna_seq.NEXTVAL, #{title}, #{content}, #{id}, SYSDATE)
 	</insert>
 
 	<update id="updateQna">
 		update qna set
 		title=#{title},
 		content=#{content},
-		image=#{image}
-		indate=SYSDATE
+		indate=SYSDATE,
 		where qnaNum=#{qnaNum}
 	</update>
 

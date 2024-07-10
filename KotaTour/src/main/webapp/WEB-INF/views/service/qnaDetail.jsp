@@ -15,14 +15,15 @@
 		</tr>
 		<tr>
 			<th height="300px;">질문내용</th>
-			<td>${qnaDTO.content}
+			<td>${qnaDTO.content}</td>
 		</tr>
 		<tr>
 			<th height="300px;">답변 내용</th>
-			<td>${qnaDTO.reply}
+			<td>${qnaDTO.reply}</td>
 		</tr>
 	</table>
 	<div class="clear"></div>
+	<c:if test="${loginMember.memberType eq '1'}">
 	<div id="buttons">
 		<input type="button" value="목록보기" class="submit"
 			onclick="location.href='getQnaList'">
@@ -31,5 +32,14 @@
 		<input type="button" value="삭제하기" class="submit"
 			onclick="qnaDelete(${qnaDTO.qnaNum})">
 	</div>
+	</c:if>
+	<c:if test="${loginMember.memberType eq '0'}">
+	<div id="buttons">
+		<input type="button" value="목록보기" class="submit"
+			onclick="location.href='getQnaList'">
+		<input type="button" value="답변하기" class="submit"
+			onclick="location.href='qnaAnswerForm?qnaNum=${qnaDTO.qnaNum}'">
+	</div>
+	</c:if>
 </form>
 <%@ include file="../footer.jsp"%>

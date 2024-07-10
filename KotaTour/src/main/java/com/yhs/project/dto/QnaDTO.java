@@ -8,7 +8,6 @@ public class QnaDTO {
 	private String reply; // 답변
 	private String id; // 등록한사람
 	private String indate; // 등록일
-	private String image; // 이미지
 	private String rep; // 답변여부
 
 	public int getQnaNum() {
@@ -59,14 +58,6 @@ public class QnaDTO {
 		this.indate = indate;
 	}
 
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
-
 	public String getRep() {
 		return rep;
 	}
@@ -78,7 +69,7 @@ public class QnaDTO {
 	@Override
 	public String toString() {
 		return "QnaDTO [qnaNum=" + qnaNum + ", title=" + title + ", content=" + content + ", reply=" + reply + ", id="
-				+ id + ", indate=" + indate + ", image=" + image + ", rep=" + rep + ", replyCount=" + "]";
+				+ id + ", indate=" + indate + ", rep=" + rep + "]";
 	}
 
 }
