@@ -4,7 +4,7 @@
 <%@ include file="sidemenu.jsp" %>
 
 <div style="margin-top: 100px;">
-<form method="post" id="mypage" action="updateMemberForm?id=${member.id}" name="formm" autocomplete="off">
+<form method="post" id="mypage" action="updateMemberForm?id=${member.id}" name="formm" autocomplete="off" style="margin-top: 200px;">
 	<div class="container">
 		<div class="insert">
 			<table class="join">

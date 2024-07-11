@@ -5,6 +5,9 @@
 <c:if test="${loginMember.memberType eq '0'}">
 	<%@ include file="../admin/member/sidemenu.jsp" %>
 </c:if>
+<c:if test="${loginMember.memberType eq '1'}">
+	<%@ include file="../mypage/sidemenu.jsp" %>
+</c:if>
 <form name="formm" class="qnaList" method="post"
 	style="min-height: 600px;">
 	<h2>자주묻는질문</h2>

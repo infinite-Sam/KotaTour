@@ -9,7 +9,7 @@
 			<li><a href="memberDetailForm">회원정보</a></li>
 			<li><a href="cart_list">장바구니</a></li>
 			<li><a href="order_list">예약내역</a></li>
-			<li><a href="qna_list">문의내역</a></li>
+			<li><a href="getQnaList">문의내역</a></li>
 		</ul>
 		</br>
 		<hr style="border: 1.5px solid black; width: 85%; text-align: center;">

@@ -3,7 +3,7 @@
   <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <%@ include file="../header.jsp" %>  
 <div style="margin-top: 50px;">
-	<form name="formm" id="updateInfo" action="updateMemberAction?id=${memberDTO.id}" class="mypage" method="post" autocomplete="off">
+	<form name="formm" id="updateInfo" action="updateMemberAction?id=${memberDTO.id}" class="mypage" method="post" autocomplete="off" style="margin-top: 200px;">
 		<div class="container">
 		<div class="insert">
 			<h2 style="text-align: center;">회원정보변경</h2>
