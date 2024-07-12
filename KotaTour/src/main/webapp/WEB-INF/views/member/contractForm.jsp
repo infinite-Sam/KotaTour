@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
 
 <form id="join" action="joinForm" method="post" name="formm" style="margin-top: 80px;">
@@ -9,7 +9,9 @@
 					<div title="이용약관" class="stepDot activeStep"></div>
 					<div title="정보입력" class="stepDot"></div>
 					<div title="가입완료" class="stepDot"></div>
-				</div> <br><br><br>
+				</div> <br>
+			<br>
+			<br>
 			</td>
 		</tr>
 
@@ -58,7 +60,9 @@
                 </textarea></td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" class="agree">이용약관에 동의합니다.<br><br><br></td>
+						<td><input type="checkbox" class="agree">이용약관에 동의합니다.<br>
+						<br>
+						<br></td>
 					</tr>
 					<tr>
 						<td>
@@ -110,10 +114,9 @@
 		</tr>
 	</table>
 
-	<br>
-	<br>
+	<br> <br>
 	<div class="contractbtn">
-		<input type="button" value="약관동의" class="but4" class="submit" onclick="go_next()"> 
+		<input type="button" value="약관동의" class="but4" class="submit" onclick="go_next()">
 		<button type="button" class="but3" style="margin: 10px;" onclick="window.history.back()">취소</button>
 	</div>
 </form>

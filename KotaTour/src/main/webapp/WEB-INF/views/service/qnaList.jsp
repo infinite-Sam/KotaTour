@@ -1,15 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
 
 <c:if test="${loginMember.memberType eq '0'}">
-	<%@ include file="../admin/member/sidemenu.jsp" %>
+	<%@ include file="../admin/member/sidemenu.jsp"%>
 </c:if>
 <c:if test="${loginMember.memberType eq '1'}">
-	<%@ include file="../mypage/sidemenu.jsp" %>
+	<%@ include file="../mypage/sidemenu.jsp"%>
 </c:if>
-<form name="formm" class="qnaList" method="post"
-	style="min-height: 600px;">
+<form name="formm" class="qnaList" method="post" style="min-height: 600px;">
 	<h2>자주묻는질문</h2>
 	<table id="andList">
 		<tr class="titleline">
@@ -18,16 +16,14 @@
 		</tr>
 		<c:forEach items="${aqnaList}" var="aqndDTO">
 			<tr style="text-align: center;">
-				<td><a href="getAqnaDetail?aqnaNum=${aqndDTO.aqnaNum}">
-						${aqndDTO.title} </a></td>
+				<td><a href="getAqnaDetail?aqnaNum=${aqndDTO.aqnaNum}"> ${aqndDTO.title} </a></td>
 				<td>${aqndDTO.name}</td>
 			</tr>
 		</c:forEach>
 	</table>
 	<!-- admin으로 로그인시 -->
 	<c:if test="${loginMember.memberType=='0'}">
-		<input type="button" value="등록하기" class="submit"
-			onclick="location.href='aqnaWriteForm'">
+		<input type="button" value="등록하기" class="submit" onclick="location.href='aqnaWriteForm'">
 		<h2 style="position: relative; margin-top: 30px;">전체 회원 문의 내역</h2>
 		<table id="andList">
 			<tr class="titleline">
@@ -38,8 +34,7 @@
 			</tr>
 			<c:forEach items="${getMemberQnaList}" var="qnaDTO">
 				<tr style="text-align: center;">
-					<td><a href="getQnaDetail?qnaNum=${qnaDTO.qnaNum}">
-					<span style="margin-left: 170px;">${qnaDTO.title}</span></a></td>
+					<td><a href="getQnaDetail?qnaNum=${qnaDTO.qnaNum}"> <span style="margin-left: 170px;">${qnaDTO.title}</span></a></td>
 					<td>${qnaDTO.indate}</td>
 					<td>${qnaDTO.id}</td>
 					<td><c:choose>
@@ -62,8 +57,7 @@
 			</tr>
 			<c:forEach items="${qnaList}" var="qnaDTO">
 				<tr style="text-align: center;">
-					<td><a href="getQnaDetail?qnaNum=${qnaDTO.qnaNum}"><span
-							style="margin-left: 170px;">${qnaDTO.title}</span></a></td>
+					<td><a href="getQnaDetail?qnaNum=${qnaDTO.qnaNum}"><span style="margin-left: 170px;">${qnaDTO.title}</span></a></td>
 					<td>${qnaDTO.indate}</td>
 					<td><c:choose>
 							<c:when test="${qnaDTO.rep==1}"> 답변대기중 </c:when>
@@ -72,8 +66,7 @@
 				</tr>
 			</c:forEach>
 		</table>
-		<input type="button" value="문의하기" class="submit"
-			onclick="location.href='qnaWriteForm'">
+		<input type="button" value="문의하기" class="submit" onclick="location.href='qnaWriteForm'">
 	</c:if>
 </form>
 <%@ include file="../footer.jsp"%>

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
 
 <form name="formm" class="qnaDetail" method="post">
@@ -24,22 +23,17 @@
 	</table>
 	<div class="clear"></div>
 	<c:if test="${loginMember.memberType eq '1'}">
-	<div id="buttons">
-		<input type="button" value="목록보기" class="submit"
-			onclick="location.href='getQnaList'">
-		<input type="button" value="수정하기" class="submit"
-			onclick="location.href='qnaUpdateForm?qnaNum=${qnaDTO.qnaNum}'">
-		<input type="button" value="삭제하기" class="submit"
-			onclick="qnaDelete(${qnaDTO.qnaNum})">
-	</div>
+		<div id="buttons">
+			<input type="button" value="목록보기" class="submit" onclick="location.href='getQnaList'"> 
+			<input type="button" value="수정하기" class="submit" onclick="location.href='qnaUpdateForm?qnaNum=${qnaDTO.qnaNum}'"> 
+			<input type="button" value="삭제하기" class="submit" onclick="qnaDelete(${qnaDTO.qnaNum})">
+		</div>
 	</c:if>
 	<c:if test="${loginMember.memberType eq '0'}">
-	<div id="buttons">
-		<input type="button" value="목록보기" class="submit"
-			onclick="location.href='getQnaList'">
-		<input type="button" value="답변하기" class="submit"
-			onclick="location.href='qnaAnswerForm?qnaNum=${qnaDTO.qnaNum}'">
-	</div>
+		<div id="buttons">
+			<input type="button" value="목록보기" class="submit" onclick="location.href='getQnaList'"> 
+			<input type="button" value="답변하기" class="submit" onclick="location.href='qnaAnswerForm?qnaNum=${qnaDTO.qnaNum}'">
+		</div>
 	</c:if>
 </form>
 <%@ include file="../footer.jsp"%>
