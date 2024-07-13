@@ -16,6 +16,7 @@
     <mvc:resources location="/WEB-INF/resources/css/" mapping="/css/**" />
 	<mvc:resources location="/WEB-INF/resources/images/" mapping="/images/**" />
 	<mvc:resources location="/WEB-INF/resources/js/" mapping="/js/**" />
+	<mvc:resources location="/WEB-INF/resources/smarteditor2/" mapping="/smarteditor2/**" />
     <!-- /WEB-INF/views/member/경로를 /member/**로 매핑 -->
     <mvc:resources location="/WEB-INF/views/member/" mapping="/member/**"/>
     <mvc:resources location="/WEB-INF/views/admin/" mapping="/admin/**"/>

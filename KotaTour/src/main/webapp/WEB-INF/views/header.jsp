@@ -12,7 +12,7 @@
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="/smarteditor2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+<script type="text/javascript" src="smarteditor2/js/HuskyEZCreator.js"></script>
 
 </head>
 <body>

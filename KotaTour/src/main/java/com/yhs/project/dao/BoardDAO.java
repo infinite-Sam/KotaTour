@@ -12,11 +12,16 @@ import com.yhs.project.dto.BoardDTO;
 public class BoardDAO {
 	@Autowired
 	private SqlSessionTemplate sst;
-	
-	// 게시글 목록조회
-	public List<BoardDTO> getBoardList(String id) {
 
-		return sst.selectList("BoardDAO.getBoardList", id);
+	// 전체 게시글 목록조회
+	public List<BoardDTO> getBoardList() {
+
+		return sst.selectList("BoardDAO.getBoardList");
+	}
+
+	// 내 게시글 목록 조회
+	public List<BoardDTO> getMyBoardList(String id) {
+		return sst.selectList("BoardDAO.getMyBoardList", id);
 	}
 
 	// 게시글 상세보기
@@ -26,16 +31,16 @@ public class BoardDAO {
 	}
 
 	// 게시글 등록하기
-	public void insertBoard(BoardDTO boardDTO) {
+	public void insertBoard(BoardDTO board) {
 
-		sst.insert("BoardDAO.insertBoard", boardDTO);
+		sst.insert("BoardDAO.insertBoard", board);
 	}
-	
+
 	// 게시글 수정
-	public void updateBoard(BoardDTO boardDTO) {
-		sst.update("BoardDAO.updateBoard", boardDTO);
+	public void updateBoard(BoardDTO board) {
+		sst.update("BoardDAO.updateBoard", board);
 	}
-	
+
 	// 게시글 삭제
 	public void deleteBoard(int boardNum) {
 		sst.delete("BoardDAO.deleteBoard", boardNum);

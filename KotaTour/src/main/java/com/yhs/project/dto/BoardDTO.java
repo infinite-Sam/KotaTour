@@ -7,7 +7,6 @@ public class BoardDTO {
 	private String content; // 내용
 	private String id; // 등록한사람
 	private String indate; // 등록일
-	private String image; // 이미지
 	private int replyCount; // 댓글 개수
 
 	public int getBoardNum() {
@@ -50,14 +49,6 @@ public class BoardDTO {
 		this.indate = indate;
 	}
 
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
-
 	public int getReplyCount() {
 		return replyCount;
 	}
@@ -69,7 +60,7 @@ public class BoardDTO {
 	@Override
 	public String toString() {
 		return "BoardDTO [boardNum=" + boardNum + ", title=" + title + ", content=" + content + ", id=" + id
-				+ ", indate=" + indate + ", image=" + image + ", replyCount=" + replyCount + "]";
+				+ ", indate=" + indate + ", replyCount=" + replyCount + "]";
 	}
 
 }

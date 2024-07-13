@@ -9,6 +9,7 @@
         <typeAlias type="com.yhs.project.dto.NoticeDTO" alias="notice"/>
         <typeAlias type="com.yhs.project.dto.QnaDTO" alias="qna"/>
         <typeAlias type="com.yhs.project.dto.AqnaDTO" alias="aqna"/>
+        <typeAlias type="com.yhs.project.dto.BoardDTO" alias="board"/>
     </typeAliases>
 
     <mappers>
@@ -16,5 +17,6 @@
         <mapper resource="mapper/MemberMapper.xml"/>
         <mapper resource="mapper/NoticeMapper.xml"/>
         <mapper resource="mapper/QnaMapper.xml"/>
+        <mapper resource="mapper/BoardMapper.xml"/>
     </mappers>
 </configuration>
