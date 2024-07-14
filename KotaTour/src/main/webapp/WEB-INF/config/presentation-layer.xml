@@ -17,6 +17,7 @@
 	<mvc:resources location="/WEB-INF/resources/images/" mapping="/images/**" />
 	<mvc:resources location="/WEB-INF/resources/js/" mapping="/js/**" />
 	<mvc:resources location="/WEB-INF/resources/smarteditor2/" mapping="/smarteditor2/**" />
+	<mvc:resources location="/WEB-INF/resources/ckeditor/" mapping="/ckeditor/**" />
     <!-- /WEB-INF/views/member/경로를 /member/**로 매핑 -->
     <mvc:resources location="/WEB-INF/views/member/" mapping="/member/**"/>
     <mvc:resources location="/WEB-INF/views/admin/" mapping="/admin/**"/>
@@ -36,6 +37,8 @@
     <!-- 파일 전송 객체 -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <!-- 업로드 파일의 최대 크기 설정 (5MB) -->
-        <property name="maxUploadSize" value="5000000"/>
+        <property name="maxUploadSize" value="10000000"/>
+        <!-- 업로드 요청을 변환할 때 사용할 문자 인코딩 방식 -->
+		<property name="defaultEncoding" value="utf-8" />
     </bean>
 </beans>

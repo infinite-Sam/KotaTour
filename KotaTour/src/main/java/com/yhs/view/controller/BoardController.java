@@ -26,7 +26,7 @@ public class BoardController {
 	public String boardWriteform(HttpSession session) {
 		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
 		if (loginMember == null) {
-			return "login";
+			return "loginForm";
 		} else {
 			return "board/boardWrite";	// 로그인이 되어있다면 게시글작성 화면이동
 		}

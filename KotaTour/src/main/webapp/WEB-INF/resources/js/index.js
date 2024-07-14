@@ -285,3 +285,12 @@ function formCheck(form) {
 			alert("삭제가 완료되었습니다.");
 		}
 	}
+
+	/* 게시글 등록 */
+	function boardWrite(){
+		var chk = confirm("게시글을 등록하시겠습니까?");
+		oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD",[]);
+		if(chk){
+			alert("게시글 등록이 완료되었습니다.");
+		}
+	}

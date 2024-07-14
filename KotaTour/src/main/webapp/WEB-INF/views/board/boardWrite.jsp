@@ -16,7 +16,7 @@
 			<tr></tr>
 			<tr>
 				<td><label>내용</label></td>
-				<td><textarea rows="10" cols="101" name="content" class="form-control" id="content"></textarea></td>
+				<td><textarea rows="10" cols="101" name="content" class="form-control" id="content" style="height: 500px;"></textarea></td>
 			</tr>
 		</table>
 		<div id="buttons">
@@ -26,30 +26,10 @@
 </div>
 
 <script type="text/javascript">
-$(function(){
-        var oEditors = [];
-        nhn.husky.EZCreator.createInIFrame({
-            oAppRef: oEditors,
-            elPlaceHolder: "content",
-            sSkinURI: "<c:url value='/smarteditor2/SmartEditor2Skin.html'/>",
-            htParams: {
-                bUseToolbar: true,
-                bUseVerticalResizer: true,
-                bUseModeChanger: true,
-                fOnBeforeUnload: function () {
-                }
-            },
-            fOnAppLoad: function () {
-            },
-            fCreator: "createSEditor2"
-        });
-
-        function submitContents(elClickedObj) {
-            // 에디터의 내용이 textarea에 적용된다.
-            oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
-            // 폼 submit
-            elClickedObj.form.submit();
-        }
+CKEDITOR.replace( 'content', {//해당 이름으로 된 textarea에 에디터를 적용
+    width:'100%',
+    height:'400px',
+    filebrowserUploadUrl:  "fileupload.do"
 });
     </script>
 <%@ include file="../footer.jsp"%>
