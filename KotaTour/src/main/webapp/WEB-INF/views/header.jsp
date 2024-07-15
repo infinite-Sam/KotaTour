@@ -7,7 +7,7 @@
 <html>
 <head>
 <title>KotaTour</title>
-<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="smarteditor2/js/HuskyEZCreator.js"></script>
 <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>

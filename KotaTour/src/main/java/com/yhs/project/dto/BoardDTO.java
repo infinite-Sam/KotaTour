@@ -1,5 +1,7 @@
 package com.yhs.project.dto;
 
+import java.util.List;
+
 public class BoardDTO {
 
 	private int boardNum; // 게시글번호

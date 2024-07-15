@@ -1,9 +1,12 @@
 package com.yhs.project.board.impl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.yhs.project.board.BoardService;
 import com.yhs.project.dao.BoardDAO;
@@ -34,9 +37,10 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public void insertBoard(BoardDTO board) {
-		boardDao.insertBoard(board);
-	}
+    @Transactional
+    public void insertBoard(BoardDTO board) {
+        boardDao.insertBoard(board);
+    }
 
 	@Override
 	public void updateBoard(BoardDTO board) {
@@ -47,4 +51,5 @@ public class BoardServiceImpl implements BoardService{
 	public void deleteBoard(int boardNum) {
 		boardDao.deleteBoard(boardNum);
 	}
+
 }

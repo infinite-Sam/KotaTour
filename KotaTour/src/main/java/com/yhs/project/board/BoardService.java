@@ -16,6 +16,7 @@ public interface BoardService {
 
 	void insertBoard(BoardDTO board);
 	
+	
 	void updateBoard(BoardDTO board);
 	
 	void deleteBoard(int boardNum);

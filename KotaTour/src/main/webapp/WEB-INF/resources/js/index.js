@@ -287,10 +287,37 @@ function formCheck(form) {
 	}
 
 	/* 게시글 등록 */
-	function boardWrite(){
-		var chk = confirm("게시글을 등록하시겠습니까?");
-		oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD",[]);
+/*	function boardWrite(){
+		var chk = confirm("게시글을 등록 하시겠습니까?");
 		if(chk){
-			alert("게시글 등록이 완료되었습니다.");
+			const form = document.getElementById('boardWrite');
+					    const formData = new FormData(form);
+
+					    $.ajax({
+					        url: 'boardWriteAction', // 실제 업로드 URL
+					        type: 'POST',
+					        data: formData,
+					        contentType: false, // jQuery가 Content-Type을 설정하지 않도록
+					        processData: false, // 데이터를 처리하지 않도록 설정
+					        success: function(response) {
+					            console.log('Upload successful:', response);
+					            // 성공 시 처리
+					        },
+					        error: function(jqXHR, textStatus, errorThrown) {
+					            let errorMessage;
+					            switch (jqXHR.status) {
+					                case 400:
+					                    errorMessage = '잘못된 요청입니다.';
+					                    break;
+					                case 500:
+					                    errorMessage = '서버 내부 오류입니다.';
+					                    break;
+					                default:
+					                    errorMessage = '예기치 않은 오류가 발생했습니다.';
+					            }
+					            alert(errorMessage); // 사용자에게 오류 메시지 알림
+					        }
+					    });
 		}
-	}
+		
+	}*/
